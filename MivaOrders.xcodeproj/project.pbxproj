@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4100EB72186C77500B4880A /* OrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4100EB62186C77500B4880A /* OrderRequest.swift */; };
+		F4100EB92186CFFA00B4880A /* OrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4100EB82186CFFA00B4880A /* OrderStatus.swift */; };
+		F43CD95521817D2800772394 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CD95421817D2800772394 /* OrderResponse.swift */; };
+		F487B1F62179A805006A54B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F487B1F52179A805006A54B6 /* AppDelegate.swift */; };
+		F487B1F82179A805006A54B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F487B1F72179A805006A54B6 /* ViewController.swift */; };
+		F487B1FB2179A805006A54B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F487B1F92179A805006A54B6 /* Main.storyboard */; };
+		F487B1FE2179A805006A54B6 /* MivaOrders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F487B1FC2179A805006A54B6 /* MivaOrders.xcdatamodeld */; };
+		F487B2002179A807006A54B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F487B1FF2179A807006A54B6 /* Assets.xcassets */; };
+		F487B2032179A807006A54B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F487B2012179A807006A54B6 /* LaunchScreen.storyboard */; };
+		F4A30C622221D6A300AADD9B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C612221D6A300AADD9B /* Customer.swift */; };
+		F4A30C642221D6C700AADD9B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C632221D6C700AADD9B /* Item.swift */; };
+		F4A30C662221D6E400AADD9B /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C652221D6E400AADD9B /* Charge.swift */; };
+		F4A30C682221D6FB00AADD9B /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C672221D6FB00AADD9B /* Coupon.swift */; };
+		F4A30C6A2221D71300AADD9B /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C692221D71300AADD9B /* Payment.swift */; };
+		F4A30C6C2221D72200AADD9B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C6B2221D72200AADD9B /* Note.swift */; };
+		F4A30C6F2221D8EE00AADD9B /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C6E2221D8EE00AADD9B /* Discount.swift */; };
+		F4A30C712221D91B00AADD9B /* CustomFieldValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C702221D91B00AADD9B /* CustomFieldValues.swift */; };
+		F4A30C732221D98900AADD9B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C722221D98900AADD9B /* Order.swift */; };
+		F4A30C752221D9EC00AADD9B /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C742221D9EC00AADD9B /* OrderData.swift */; };
+		F4A30C782221E19300AADD9B /* PaymentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C772221E19300AADD9B /* PaymentStatus.swift */; };
+		F4A30C7A2221E1AD00AADD9B /* StockStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C792221E1AD00AADD9B /* StockStatus.swift */; };
+		F4A30C7C2221FFBA00AADD9B /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C7B2221FFBA00AADD9B /* Option.swift */; };
+		F4A30C7E2221FFCE00AADD9B /* Shipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C7D2221FFCE00AADD9B /* Shipment.swift */; };
+		F4A30C802221FFE400AADD9B /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C7F2221FFE400AADD9B /* Subscription.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F4100EB62186C77500B4880A /* OrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequest.swift; sourceTree = "<group>"; };
+		F4100EB82186CFFA00B4880A /* OrderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatus.swift; sourceTree = "<group>"; };
+		F43CD95421817D2800772394 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
+		F487B1F22179A805006A54B6 /* MivaOrders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MivaOrders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F487B1F52179A805006A54B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F487B1F72179A805006A54B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F487B1FA2179A805006A54B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F487B1FD2179A805006A54B6 /* MivaOrders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MivaOrders.xcdatamodel; sourceTree = "<group>"; };
+		F487B1FF2179A807006A54B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F487B2022179A807006A54B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F487B2042179A807006A54B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4A30C612221D6A300AADD9B /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		F4A30C632221D6C700AADD9B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F4A30C652221D6E400AADD9B /* Charge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
+		F4A30C672221D6FB00AADD9B /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		F4A30C692221D71300AADD9B /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		F4A30C6B2221D72200AADD9B /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F4A30C6E2221D8EE00AADD9B /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
+		F4A30C702221D91B00AADD9B /* CustomFieldValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFieldValues.swift; sourceTree = "<group>"; };
+		F4A30C722221D98900AADD9B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		F4A30C742221D9EC00AADD9B /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
+		F4A30C772221E19300AADD9B /* PaymentStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatus.swift; sourceTree = "<group>"; };
+		F4A30C792221E1AD00AADD9B /* StockStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockStatus.swift; sourceTree = "<group>"; };
+		F4A30C7B2221FFBA00AADD9B /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		F4A30C7D2221FFCE00AADD9B /* Shipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shipment.swift; sourceTree = "<group>"; };
+		F4A30C7F2221FFE400AADD9B /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F487B1EF2179A805006A54B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F487B1E92179A805006A54B6 = {
+			isa = PBXGroup;
+			children = (
+				F487B1F42179A805006A54B6 /* MivaOrders */,
+				F487B1F32179A805006A54B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F487B1F32179A805006A54B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F487B1F22179A805006A54B6 /* MivaOrders.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F487B1F42179A805006A54B6 /* MivaOrders */ = {
+			isa = PBXGroup;
+			children = (
+				F487B1F52179A805006A54B6 /* AppDelegate.swift */,
+				F487B1F72179A805006A54B6 /* ViewController.swift */,
+				F487B1F92179A805006A54B6 /* Main.storyboard */,
+				F4A30C6D2221D75D00AADD9B /* OrderResponse */,
+				F487B1FF2179A807006A54B6 /* Assets.xcassets */,
+				F487B2012179A807006A54B6 /* LaunchScreen.storyboard */,
+				F487B2042179A807006A54B6 /* Info.plist */,
+				F487B1FC2179A805006A54B6 /* MivaOrders.xcdatamodeld */,
+			);
+			path = MivaOrders;
+			sourceTree = "<group>";
+		};
+		F4A30C6D2221D75D00AADD9B /* OrderResponse */ = {
+			isa = PBXGroup;
+			children = (
+				F43CD95421817D2800772394 /* OrderResponse.swift */,
+				F4A30C742221D9EC00AADD9B /* OrderData.swift */,
+				F4A30C722221D98900AADD9B /* Order.swift */,
+				F4A30C612221D6A300AADD9B /* Customer.swift */,
+				F4A30C632221D6C700AADD9B /* Item.swift */,
+				F4A30C7B2221FFBA00AADD9B /* Option.swift */,
+				F4A30C7D2221FFCE00AADD9B /* Shipment.swift */,
+				F4A30C7F2221FFE400AADD9B /* Subscription.swift */,
+				F4A30C652221D6E400AADD9B /* Charge.swift */,
+				F4A30C672221D6FB00AADD9B /* Coupon.swift */,
+				F4A30C692221D71300AADD9B /* Payment.swift */,
+				F4A30C6B2221D72200AADD9B /* Note.swift */,
+				F4A30C6E2221D8EE00AADD9B /* Discount.swift */,
+				F4A30C702221D91B00AADD9B /* CustomFieldValues.swift */,
+				F4A30C762221E17800AADD9B /* Status */,
+				F4100EB62186C77500B4880A /* OrderRequest.swift */,
+			);
+			path = OrderResponse;
+			sourceTree = "<group>";
+		};
+		F4A30C762221E17800AADD9B /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				F4100EB82186CFFA00B4880A /* OrderStatus.swift */,
+				F4A30C772221E19300AADD9B /* PaymentStatus.swift */,
+				F4A30C792221E1AD00AADD9B /* StockStatus.swift */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F487B1F12179A805006A54B6 /* MivaOrders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F487B2072179A807006A54B6 /* Build configuration list for PBXNativeTarget "MivaOrders" */;
+			buildPhases = (
+				F487B1EE2179A805006A54B6 /* Sources */,
+				F487B1EF2179A805006A54B6 /* Frameworks */,
+				F487B1F02179A805006A54B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MivaOrders;
+			productName = MivaOrders;
+			productReference = F487B1F22179A805006A54B6 /* MivaOrders.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F487B1EA2179A805006A54B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Mark Tapia";
+				TargetAttributes = {
+					F487B1F12179A805006A54B6 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = F487B1ED2179A805006A54B6 /* Build configuration list for PBXProject "MivaOrders" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F487B1E92179A805006A54B6;
+			productRefGroup = F487B1F32179A805006A54B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F487B1F12179A805006A54B6 /* MivaOrders */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F487B1F02179A805006A54B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F487B2032179A807006A54B6 /* LaunchScreen.storyboard in Resources */,
+				F487B2002179A807006A54B6 /* Assets.xcassets in Resources */,
+				F487B1FB2179A805006A54B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F487B1EE2179A805006A54B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4A30C7A2221E1AD00AADD9B /* StockStatus.swift in Sources */,
+				F4A30C752221D9EC00AADD9B /* OrderData.swift in Sources */,
+				F4100EB92186CFFA00B4880A /* OrderStatus.swift in Sources */,
+				F4A30C622221D6A300AADD9B /* Customer.swift in Sources */,
+				F487B1F82179A805006A54B6 /* ViewController.swift in Sources */,
+				F4A30C6A2221D71300AADD9B /* Payment.swift in Sources */,
+				F4A30C7C2221FFBA00AADD9B /* Option.swift in Sources */,
+				F487B1FE2179A805006A54B6 /* MivaOrders.xcdatamodeld in Sources */,
+				F4A30C782221E19300AADD9B /* PaymentStatus.swift in Sources */,
+				F4A30C662221D6E400AADD9B /* Charge.swift in Sources */,
+				F4A30C6F2221D8EE00AADD9B /* Discount.swift in Sources */,
+				F4A30C682221D6FB00AADD9B /* Coupon.swift in Sources */,
+				F4A30C642221D6C700AADD9B /* Item.swift in Sources */,
+				F4A30C712221D91B00AADD9B /* CustomFieldValues.swift in Sources */,
+				F4100EB72186C77500B4880A /* OrderRequest.swift in Sources */,
+				F43CD95521817D2800772394 /* OrderResponse.swift in Sources */,
+				F4A30C732221D98900AADD9B /* Order.swift in Sources */,
+				F4A30C7E2221FFCE00AADD9B /* Shipment.swift in Sources */,
+				F4A30C802221FFE400AADD9B /* Subscription.swift in Sources */,
+				F487B1F62179A805006A54B6 /* AppDelegate.swift in Sources */,
+				F4A30C6C2221D72200AADD9B /* Note.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F487B1F92179A805006A54B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F487B1FA2179A805006A54B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F487B2012179A807006A54B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F487B2022179A807006A54B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F487B2052179A807006A54B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F487B2062179A807006A54B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F487B2082179A807006A54B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGABW4X2P7;
+				INFOPLIST_FILE = MivaOrders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.MivaOrders;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F487B2092179A807006A54B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGABW4X2P7;
+				INFOPLIST_FILE = MivaOrders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.MivaOrders;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F487B1ED2179A805006A54B6 /* Build configuration list for PBXProject "MivaOrders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F487B2052179A807006A54B6 /* Debug */,
+				F487B2062179A807006A54B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F487B2072179A807006A54B6 /* Build configuration list for PBXNativeTarget "MivaOrders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F487B2082179A807006A54B6 /* Debug */,
+				F487B2092179A807006A54B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F487B1FC2179A805006A54B6 /* MivaOrders.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F487B1FD2179A805006A54B6 /* MivaOrders.xcdatamodel */,
+			);
+			currentVersion = F487B1FD2179A805006A54B6 /* MivaOrders.xcdatamodel */;
+			path = MivaOrders.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F487B1EA2179A805006A54B6 /* Project object */;
+}
