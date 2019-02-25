@@ -31,6 +31,11 @@
 		F4A30C7C2221FFBA00AADD9B /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C7B2221FFBA00AADD9B /* Option.swift */; };
 		F4A30C7E2221FFCE00AADD9B /* Shipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C7D2221FFCE00AADD9B /* Shipment.swift */; };
 		F4A30C802221FFE400AADD9B /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C7F2221FFE400AADD9B /* Subscription.swift */; };
+		F4A30C822223404E00AADD9B /* ProductSubscriptionTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C812223404E00AADD9B /* ProductSubscriptionTerm.swift */; };
+		F4A30C8422235F5100AADD9B /* ItemDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C8322235F5100AADD9B /* ItemDiscount.swift */; };
+		F4A30C86222360C700AADD9B /* PaymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C85222360C700AADD9B /* PaymentType.swift */; };
+		F4A30C8922236A4900AADD9B /* DecryptionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C8822236A4900AADD9B /* DecryptionStatus.swift */; };
+		F4A30C8B22236BD000AADD9B /* PaymentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C8A22236BD000AADD9B /* PaymentData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		F4A30C7B2221FFBA00AADD9B /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		F4A30C7D2221FFCE00AADD9B /* Shipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shipment.swift; sourceTree = "<group>"; };
 		F4A30C7F2221FFE400AADD9B /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		F4A30C812223404E00AADD9B /* ProductSubscriptionTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSubscriptionTerm.swift; sourceTree = "<group>"; };
+		F4A30C8322235F5100AADD9B /* ItemDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDiscount.swift; sourceTree = "<group>"; };
+		F4A30C85222360C700AADD9B /* PaymentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentType.swift; sourceTree = "<group>"; };
+		F4A30C8822236A4900AADD9B /* DecryptionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptionStatus.swift; sourceTree = "<group>"; };
+		F4A30C8A22236BD000AADD9B /* PaymentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +105,7 @@
 				F487B1F52179A805006A54B6 /* AppDelegate.swift */,
 				F487B1F72179A805006A54B6 /* ViewController.swift */,
 				F487B1F92179A805006A54B6 /* Main.storyboard */,
-				F4A30C6D2221D75D00AADD9B /* OrderResponse */,
+				F4A30C87222362E200AADD9B /* Model */,
 				F487B1FF2179A807006A54B6 /* Assets.xcassets */,
 				F487B2012179A807006A54B6 /* LaunchScreen.storyboard */,
 				F487B2042179A807006A54B6 /* Info.plist */,
@@ -113,15 +123,17 @@
 				F4A30C612221D6A300AADD9B /* Customer.swift */,
 				F4A30C632221D6C700AADD9B /* Item.swift */,
 				F4A30C6E2221D8EE00AADD9B /* Discount.swift */,
+				F4A30C8322235F5100AADD9B /* ItemDiscount.swift */,
 				F4A30C7B2221FFBA00AADD9B /* Option.swift */,
 				F4A30C7D2221FFCE00AADD9B /* Shipment.swift */,
 				F4A30C7F2221FFE400AADD9B /* Subscription.swift */,
+				F4A30C812223404E00AADD9B /* ProductSubscriptionTerm.swift */,
 				F4A30C652221D6E400AADD9B /* Charge.swift */,
 				F4A30C672221D6FB00AADD9B /* Coupon.swift */,
 				F4A30C692221D71300AADD9B /* Payment.swift */,
+				F4A30C8A22236BD000AADD9B /* PaymentData.swift */,
 				F4A30C6B2221D72200AADD9B /* Note.swift */,
 				F4A30C702221D91B00AADD9B /* CustomFieldValues.swift */,
-				F4A30C762221E17800AADD9B /* Status */,
 				F4100EB62186C77500B4880A /* OrderRequest.swift */,
 			);
 			path = OrderResponse;
@@ -133,8 +145,19 @@
 				F4100EB82186CFFA00B4880A /* OrderStatus.swift */,
 				F4A30C772221E19300AADD9B /* PaymentStatus.swift */,
 				F4A30C792221E1AD00AADD9B /* StockStatus.swift */,
+				F4A30C85222360C700AADD9B /* PaymentType.swift */,
+				F4A30C8822236A4900AADD9B /* DecryptionStatus.swift */,
 			);
 			path = Status;
+			sourceTree = "<group>";
+		};
+		F4A30C87222362E200AADD9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4A30C762221E17800AADD9B /* Status */,
+				F4A30C6D2221D75D00AADD9B /* OrderResponse */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,18 +235,23 @@
 				F4A30C752221D9EC00AADD9B /* OrderData.swift in Sources */,
 				F4100EB92186CFFA00B4880A /* OrderStatus.swift in Sources */,
 				F4A30C622221D6A300AADD9B /* Customer.swift in Sources */,
+				F4A30C86222360C700AADD9B /* PaymentType.swift in Sources */,
 				F487B1F82179A805006A54B6 /* ViewController.swift in Sources */,
+				F4A30C8422235F5100AADD9B /* ItemDiscount.swift in Sources */,
 				F4A30C6A2221D71300AADD9B /* Payment.swift in Sources */,
+				F4A30C8922236A4900AADD9B /* DecryptionStatus.swift in Sources */,
 				F4A30C7C2221FFBA00AADD9B /* Option.swift in Sources */,
 				F487B1FE2179A805006A54B6 /* MivaOrders.xcdatamodeld in Sources */,
 				F4A30C782221E19300AADD9B /* PaymentStatus.swift in Sources */,
 				F4A30C662221D6E400AADD9B /* Charge.swift in Sources */,
 				F4A30C6F2221D8EE00AADD9B /* Discount.swift in Sources */,
+				F4A30C8B22236BD000AADD9B /* PaymentData.swift in Sources */,
 				F4A30C682221D6FB00AADD9B /* Coupon.swift in Sources */,
 				F4A30C642221D6C700AADD9B /* Item.swift in Sources */,
 				F4A30C712221D91B00AADD9B /* CustomFieldValues.swift in Sources */,
 				F4100EB72186C77500B4880A /* OrderRequest.swift in Sources */,
 				F43CD95521817D2800772394 /* OrderResponse.swift in Sources */,
+				F4A30C822223404E00AADD9B /* ProductSubscriptionTerm.swift in Sources */,
 				F4A30C732221D98900AADD9B /* Order.swift in Sources */,
 				F4A30C7E2221FFCE00AADD9B /* Shipment.swift in Sources */,
 				F4A30C802221FFE400AADD9B /* Subscription.swift in Sources */,

@@ -9,5 +9,5 @@
 import Foundation
 
 struct CustomFieldValues: Decodable {
-    
+    //Custom field keys/values unique to each store. Figure out how to display them.
 }

@@ -14,7 +14,7 @@ struct OrdersRequest: Encodable {
     let function: String
     let count: Int
     let offset: Int
-    let filter: [NameValuePair]
+    let filter: [FilterNameValuePair]
     
     enum CodingKeys: String, CodingKey {
         case mivaRequestTimeStamp = "Miva_Request_Timestamp"
@@ -26,12 +26,12 @@ struct OrdersRequest: Encodable {
     }
 }
 
-enum NameValuePair {
+enum FilterNameValuePair {
     case columns(String)
     case searchValues(Expression)
 }
 
-extension NameValuePair: Encodable {
+extension FilterNameValuePair: Encodable {
     private enum CodingKeys: String, CodingKey {
         case name
         case value

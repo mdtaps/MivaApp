@@ -26,7 +26,7 @@ struct Item: Decodable {
     let isTaxable: Bool
     let isUpsold: Bool
     let quantity: Int
-    let discounts: [Discount]?
+    let discounts: [ItemDiscount]?
     let options: [Option]?
     let total: Double
     let shipment: Shipment?
