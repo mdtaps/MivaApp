@@ -10,7 +10,7 @@ import Foundation
 
 struct OrderData: Decodable {
     let numberOfMatchingOrders: Int?
-    let startOffset: Int?
+    let startOffset: Int
     let orders: [Order]
     
     enum CodingKeys: String, CodingKey {
