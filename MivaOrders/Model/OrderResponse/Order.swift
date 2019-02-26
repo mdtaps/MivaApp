@@ -45,11 +45,11 @@ struct Order: Decodable {
     let billingAddressCountry: String
     let shippingModuleId: Int
     let shippingData: String
-    let shippingMethodName: String
-    let customerLogin: String
-    let customerEmail: String
-    let customerBusinessTitle: String
-    let paymentModuleName: String
+    let shippingMethodName: String?
+    let customerLogin: String?
+    let customerEmail: String?
+    let customerBusinessTitle: String?
+    let paymentModuleName: String?
     let orderSource: String
     let orderSourceId: Int
     let orderTotal: Double
@@ -69,14 +69,14 @@ struct Order: Decodable {
     let pendingItemsCount: Int
     let backorderedItemsCount: Int
     let noteCount: Int
-    let customer: Customer
-    let items: [Item]
-    let charges: [Charge]
-    let coupons: [Coupon]
-    let discounts: [Discount]
-    let payments: [Payment]
-    let notes: [Note]
-    let customFieldValues: CustomFieldValues
+    let customer: Customer?
+    let items: [Item]?
+    let charges: [Charge]?
+    let coupons: [Coupon]?
+    let discounts: [Discount]?
+    let payments: [Payment]?
+    let notes: [Note]?
+    let customFieldValues: CustomFieldValues?
     
     enum CodingKeys: String, CodingKey {
         case orderId = "id"

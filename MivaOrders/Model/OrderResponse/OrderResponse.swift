@@ -9,7 +9,7 @@
 import Foundation
 
 struct OrderResponse: Decodable {
-    let success: String
+    let success: Int
     let errorCode: String?
     let errorMessage: String?
     let validationError: Bool?

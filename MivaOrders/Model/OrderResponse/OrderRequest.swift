@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct OrdersRequest: Encodable {
-    let mivaRequestTimeStamp: String
+struct OrderRequest: Encodable {
+    let mivaRequestTimeStamp: String?
     let storeCode: String
     let function: String
     let count: Int
     let offset: Int
-    let filter: [FilterNameValuePair]
+    let filter: [FilterNameValuePair]?
     
     enum CodingKeys: String, CodingKey {
         case mivaRequestTimeStamp = "Miva_Request_Timestamp"
