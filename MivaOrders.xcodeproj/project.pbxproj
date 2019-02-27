@@ -40,6 +40,7 @@
 		F4A30C902224EA4400AADD9B /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C8F2224EA4400AADD9B /* APIConstants.swift */; };
 		F4A30C922225048900AADD9B /* MivaClient+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C912225048900AADD9B /* MivaClient+Functions.swift */; };
 		F4D8D52E222530C100F210D5 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D8D52D222530C100F210D5 /* APIKey.plist */; };
+		F4D8D53122263DEF00F210D5 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8D53022263DEF00F210D5 /* HMAC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,8 @@
 		F4A30C8F2224EA4400AADD9B /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		F4A30C912225048900AADD9B /* MivaClient+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MivaClient+Functions.swift"; sourceTree = "<group>"; };
 		F4D8D52D222530C100F210D5 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		F4D8D52F22263D4E00F210D5 /* UnofficialMivaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnofficialMivaApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		F4D8D53022263DEF00F210D5 /* HMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				F4A30C8C2223BA6B00AADD9B /* NetworkRequests */,
 				F4A30C762221E17800AADD9B /* Status */,
 				F4A30C6D2221D75D00AADD9B /* OrderResponse */,
+				F4D8D52F22263D4E00F210D5 /* UnofficialMivaApp-Bridging-Header.h */,
+				F4D8D53022263DEF00F210D5 /* HMAC.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				F4A30C822223404E00AADD9B /* ProductSubscriptionTerm.swift in Sources */,
 				F4A30C732221D98900AADD9B /* Order.swift in Sources */,
 				F4A30C7E2221FFCE00AADD9B /* Shipment.swift in Sources */,
+				F4D8D53122263DEF00F210D5 /* HMAC.swift in Sources */,
 				F4A30C802221FFE400AADD9B /* Subscription.swift in Sources */,
 				F487B1F62179A805006A54B6 /* AppDelegate.swift in Sources */,
 				F4A30C6C2221D72200AADD9B /* Note.swift in Sources */,
@@ -433,6 +439,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.MivaOrders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MivaOrders/Model/UnofficialMivaApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,6 +458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mdtaps.MivaOrders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MivaOrders/Model/UnofficialMivaApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

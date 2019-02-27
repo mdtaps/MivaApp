@@ -12,8 +12,11 @@ import UIKit
 struct APIConstants {
     struct UrlComponents {
         static let Scheme = "https"
+        //TODO: Get Host from user
         static let Host = "dts3211.mivamerchantdev.com"
-        static let Path = "/mm5/json.mvc"
+        //TODO: Get public folder path
+        static let PublicFolderPath = "/mm5"
+        static let Path = APIConstants.UrlComponents.PublicFolderPath + "/json.mvc"
     }
         
     struct RequestHeaderKeys {
@@ -30,7 +33,7 @@ struct APIConstants {
         static let UserAgent = UAString()
         static let ContentType = "application/json"
         //TODO: Hide this and get it from user input
-        static let APIAuthToken = "MIVA \(APIKey())"
+        static let APIAuthToken = "MIVA-HMAC-SHA1 \(APIKey())"
         static let Accept = "*/*"
         //TODO: Evaluate size of data here
         static let ContentLength = "629"
@@ -97,6 +100,29 @@ extension APIConstants {
         return "\(name)/\(version)"
     }
     
+    
+    //MARK: HMAC Signature
+    static func HMAC(requestBody: Data, key: String) -> String {
+        guard let decodedString = key.base64Decoded() else {
+            //TODO: Error reporting
+            fatalError("Unable to decode Signature Key")
+        }
+        
+        let bodyString = String(data: requestBody, encoding: .utf8)!
+        let hmacSha1Body = bodyString.hmac(algorithm: .sha1, key: decodedString)
+        let hmacSha1BodyData = hmacSha1Body.data(using: .utf8)!
+
+        return hmacSha1BodyData.base64EncodedString()
+//      xa+jN8erZe1RLoio5OJl6K/7gtz/IVJFQ5IRGm9Tnd0=
+    }
+}
+
+extension String {
+    func base64Decoded() -> String? {
+        //TODO: Fix this code!
+        let data = Data(base64Encoded: self)!
+        return data.map { String(format: "%02hhx", $0 as CVarArg) }.joined()
+    }
 }
 
 

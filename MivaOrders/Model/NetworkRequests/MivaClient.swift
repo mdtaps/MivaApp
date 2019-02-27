@@ -87,8 +87,11 @@ extension MivaClient {
     fileprivate func getMivaRequestFrom(url: URL) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        let data = getHttpBody()
+        let key = "xa+jN8erZe1RLoio5OJl6K/7gtz/IVJFQ5IRGm9Tnd0="
+        let hmacString = APIConstants.HMAC(requestBody: data, key: key)
         request.httpBody = getHttpBody()
-        request.allHTTPHeaderFields = getHttpHeaders()
+        request.allHTTPHeaderFields = getHttpHeaders(hmac: hmacString)
         
         return request
     }
