@@ -15,12 +15,10 @@ extension MivaClient {
         print("TimeStamp:\(timeStamp)")
         let requestObject = OrderRequest(mivaRequestTimeStamp: nil, storeCode: "somesock", function: "OrderList_Load_Query", count: 0, offset: 0, filter: nil)
         
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        
+        let encoder = JSONEncoder()        
         do {
             let data = try encoder.encode(requestObject)
-            print(String(data: data, encoding: .utf8)!)
+            print("My JSON: \(String(data: data, encoding: .utf8)!)")
             return data
         } catch {
             fatalError("There was an error encoding")
@@ -32,10 +30,10 @@ extension MivaClient {
         httpHeaders[APIConstants.RequestHeaderKeys.Host] = APIConstants.RequestHeaderValues.Host
         httpHeaders[APIConstants.RequestHeaderKeys.UserAgent] = APIConstants.RequestHeaderValues.UserAgent
         httpHeaders[APIConstants.RequestHeaderKeys.ContentType] = APIConstants.RequestHeaderValues.ContentType
-        httpHeaders[APIConstants.RequestHeaderKeys.APIAuthToken] = APIConstants.RequestHeaderValues.APIAuthToken + ":" + hmac
+        httpHeaders[APIConstants.RequestHeaderKeys.APIAuthToken] = APIConstants.RequestHeaderValues.APIAuthToken + ":" + hmac //"ACGT7bw4ENmOzINgAQBrwkBGbZM="
         print(httpHeaders[APIConstants.RequestHeaderKeys.APIAuthToken]!)
-        httpHeaders[APIConstants.RequestHeaderKeys.Accept] = APIConstants.RequestHeaderValues.Accept
-        httpHeaders[APIConstants.RequestHeaderKeys.ContentLength] = APIConstants.RequestHeaderValues.ContentLength
+//        httpHeaders[APIConstants.RequestHeaderKeys.Accept] = APIConstants.RequestHeaderValues.Accept
+//        httpHeaders[APIConstants.RequestHeaderKeys.ContentLength] = APIConstants.RequestHeaderValues.ContentLength
         
         return httpHeaders
     }

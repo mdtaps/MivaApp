@@ -51,10 +51,33 @@ enum HmacAlgorithm {
 }
 
 extension String {
+    
     func hmac(algorithm: HmacAlgorithm, key: String) -> String {
-        var digest = [UInt8](repeating: 0, count: algorithm.digestLength)
-        CCHmac(algorithm.algorithm, key, key.count, self, self.count, &digest)
-        let data = Data(bytes: digest)
-        return data.map { String(format: "%02hhx", $0) }.joined()
+        let str = self.cString(using: .utf8)
+        let strLen = Int(self.lengthOfBytes(using: .utf8))
+        let digestLen = algorithm.digestLength
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
+        let keyStr = key.cString(using: .utf8)
+        let keyLen = Int(key.lengthOfBytes(using: .utf8))
+        
+        CCHmac(algorithm.algorithm, keyStr!, keyLen, str!, strLen, result)
+        let digestData = Data(bytes: result, count: algorithm.digestLength)
+        let digestString = digestData.base64EncodedString()
+        
+//        let digest = stringFromResult(result: result, length: digestLen)
+        
+        result.deallocate()
+        
+        return digestString
     }
+    
+    //TODO: Maybe remove this
+    private func stringFromResult(result: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String {
+        let hash = NSMutableString()
+        for i in 0..<length {
+            hash.appendFormat("%02x", result[i])
+        }
+        return String(hash)
+    }
+    
 }

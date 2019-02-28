@@ -18,13 +18,10 @@ class ViewController: UIViewController {
             case .Failure(with: let failureString):
                 print(failureString)
             case .Success(with: let data):
-                let jsonString = (String(data: data, encoding: .utf8)!)
-                print(jsonString)
-                
                 let decoder = JSONDecoder()
                 do {
                     let mivaOrders = try decoder.decode(OrderResponse.self, from: data)
-                    print(mivaOrders)
+                    print("Miva orders: \(mivaOrders)")
                 } catch {
                     print("Error: \(error)")
                 }

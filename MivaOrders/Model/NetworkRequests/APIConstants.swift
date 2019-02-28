@@ -103,16 +103,20 @@ extension APIConstants {
     
     //MARK: HMAC Signature
     static func HMAC(requestBody: Data, key: String) -> String {
-        guard let decodedString = key.base64Decoded() else {
-            //TODO: Error reporting
-            fatalError("Unable to decode Signature Key")
-        }
+//        guard let decodedString = key.base64Decoded() else {
+//            //TODO: Error reporting
+//            fatalError("Unable to decode Signature Key")
+//        }
+        
+        let testKey = "This is my special test key for Miva"
         
         let bodyString = String(data: requestBody, encoding: .utf8)!
-        let hmacSha1Body = bodyString.hmac(algorithm: .sha1, key: decodedString)
+        var hmacSha1Body = bodyString.hmac(algorithm: .sha1, key: testKey)
+        print("Hash: \(hmacSha1Body)")
         let hmacSha1BodyData = hmacSha1Body.data(using: .utf8)!
-
-        return hmacSha1BodyData.base64EncodedString()
+        let base64hash = hmacSha1Body
+        print(base64hash)
+        return base64hash
 //      xa+jN8erZe1RLoio5OJl6K/7gtz/IVJFQ5IRGm9Tnd0=
     }
 }
