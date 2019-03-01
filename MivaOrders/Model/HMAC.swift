@@ -52,15 +52,15 @@ enum HmacAlgorithm {
 
 extension String {
     
-    func hmac(algorithm: HmacAlgorithm, key: String) -> String {
+    func hmac(algorithm: HmacAlgorithm, key: [UInt8]) -> String {
         let str = self.cString(using: .utf8)
         let strLen = Int(self.lengthOfBytes(using: .utf8))
         let digestLen = algorithm.digestLength
         let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
-        let keyStr = key.cString(using: .utf8)
-        let keyLen = Int(key.lengthOfBytes(using: .utf8))
+        let keyStr = key
+        let keyLen = Int(key.count)
         
-        CCHmac(algorithm.algorithm, keyStr!, keyLen, str!, strLen, result)
+        CCHmac(algorithm.algorithm, keyStr, keyLen, str!, strLen, result)
         let digestData = Data(bytes: result, count: algorithm.digestLength)
         let digestString = digestData.base64EncodedString()
         

@@ -13,7 +13,7 @@ extension MivaClient {
     private func dataFromJSON() -> Data {
         let timeStamp = String(Int64(floor(Date().timeIntervalSince1970)))
         print("TimeStamp:\(timeStamp)")
-        let requestObject = OrderRequest(mivaRequestTimeStamp: nil, storeCode: "somesock", function: "OrderList_Load_Query", count: 0, offset: 0, filter: nil)
+        let requestObject = OrderRequest(mivaRequestTimeStamp: timeStamp, storeCode: "somesock", function: "OrderList_Load_Query", count: 0, offset: 0, filter: nil)
         
         let encoder = JSONEncoder()        
         do {

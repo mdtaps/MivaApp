@@ -88,11 +88,17 @@ extension MivaClient {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         let data = getHttpBody()
-        let key = "This is my special test key for Miva"
+        let key = getDecodedKey(encodedKeyString: "cG6+9NUT7n5+rvw0lLsl4eq3OnKF2AT02ceAKNOWkFU=")
+//        let key = "This is my special test key for Miva"
         let hmacString = APIConstants.HMAC(requestBody: data, key: key)
         request.httpBody = getHttpBody()
         request.allHTTPHeaderFields = getHttpHeaders(hmac: hmacString)
         
         return request
+    }
+    
+    private func getDecodedKey(encodedKeyString: String) -> [UInt8] {
+        let decodedKey = Data(base64Encoded: encodedKeyString)!
+        return [UInt8](decodedKey)
     }
 }
