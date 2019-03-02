@@ -41,6 +41,7 @@
 		F4A30C922225048900AADD9B /* MivaClient+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C912225048900AADD9B /* MivaClient+Functions.swift */; };
 		F4D8D52E222530C100F210D5 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D8D52D222530C100F210D5 /* APIKey.plist */; };
 		F4D8D53122263DEF00F210D5 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8D53022263DEF00F210D5 /* HMAC.swift */; };
+		F4D8D537222A5D9C00F210D5 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8D536222A5D9C00F210D5 /* AuthClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		F4D8D52D222530C100F210D5 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
 		F4D8D52F22263D4E00F210D5 /* UnofficialMivaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnofficialMivaApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4D8D53022263DEF00F210D5 /* HMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		F4D8D536222A5D9C00F210D5 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthClient.swift; path = MivaOrders/Model/AuthClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		F487B1E92179A805006A54B6 = {
 			isa = PBXGroup;
 			children = (
+				F4D8D536222A5D9C00F210D5 /* AuthClient.swift */,
 				F487B1F42179A805006A54B6 /* MivaOrders */,
 				F487B1F32179A805006A54B6 /* Products */,
 			);
@@ -283,6 +286,7 @@
 				F4A30C822223404E00AADD9B /* ProductSubscriptionTerm.swift in Sources */,
 				F4A30C732221D98900AADD9B /* Order.swift in Sources */,
 				F4A30C7E2221FFCE00AADD9B /* Shipment.swift in Sources */,
+				F4D8D537222A5D9C00F210D5 /* AuthClient.swift in Sources */,
 				F4D8D53122263DEF00F210D5 /* HMAC.swift in Sources */,
 				F4A30C802221FFE400AADD9B /* Subscription.swift in Sources */,
 				F487B1F62179A805006A54B6 /* AppDelegate.swift in Sources */,

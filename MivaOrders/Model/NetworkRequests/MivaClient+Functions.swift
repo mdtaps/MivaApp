@@ -30,10 +30,7 @@ extension MivaClient {
         httpHeaders[APIConstants.RequestHeaderKeys.Host] = APIConstants.RequestHeaderValues.Host
         httpHeaders[APIConstants.RequestHeaderKeys.UserAgent] = APIConstants.RequestHeaderValues.UserAgent
         httpHeaders[APIConstants.RequestHeaderKeys.ContentType] = APIConstants.RequestHeaderValues.ContentType
-        httpHeaders[APIConstants.RequestHeaderKeys.APIAuthToken] = APIConstants.RequestHeaderValues.APIAuthToken + ":" + hmac //"ACGT7bw4ENmOzINgAQBrwkBGbZM="
-        print(httpHeaders[APIConstants.RequestHeaderKeys.APIAuthToken]!)
-//        httpHeaders[APIConstants.RequestHeaderKeys.Accept] = APIConstants.RequestHeaderValues.Accept
-//        httpHeaders[APIConstants.RequestHeaderKeys.ContentLength] = APIConstants.RequestHeaderValues.ContentLength
+        httpHeaders[APIConstants.RequestHeaderKeys.APIAuthToken] = APIConstants.RequestHeaderValues.APIAuthToken + ":" + hmac
         
         return httpHeaders
     }

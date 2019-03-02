@@ -33,16 +33,40 @@ struct APIConstants {
         static let UserAgent = UAString()
         static let ContentType = "application/json"
         //TODO: Hide this and get it from user input
-        static let APIAuthToken = "MIVA-HMAC-SHA1 \(APIKey())"
-        static let Accept = "*/*"
-        //TODO: Evaluate size of data here
-        static let ContentLength = "629"
+        static let APIAuthToken = "MIVA-HMAC-SHA1 \(getAPIKey())"
     }
 }
 
 extension APIConstants {
-    //MARK: Get API Key
-    private static func APIKey() -> String {
+    //MARK: Utility Functions
+    private static func getAPIAuthToken() -> String {
+        let authType = getAuthType()
+        let apiKey = getAPIKey()
+        let hmacHash = getHmacHash()
+
+        return authType + " " + apiKey + hmacHash
+    }
+    
+    private static func getHmacHash() -> String {
+        //TODO: If hmac hash is on, add hashed string
+        if true {
+            return ":" + 
+        } else {
+            return ""
+        }
+    }
+    
+    private static func getAuthType() -> String {
+        var authTypeString = "MIVA"
+        //TODO: Update auth type string if hmac hash turned on
+        if true {
+            authTypeString += "-HMAC-SHA1"
+        }
+        
+        return authTypeString
+    }
+    
+    private static func getAPIKey() -> String {
         guard let filePath = Bundle.main.path(forResource: "APIKey", ofType: "plist") else {
             fatalError("Check file list for APIKey.plist")
         }
