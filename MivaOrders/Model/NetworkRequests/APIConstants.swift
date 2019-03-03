@@ -32,62 +32,15 @@ struct APIConstants {
         static let Host = "dts3211.mivamerchantdev.com"
         static let UserAgent = UAString()
         static let ContentType = "application/json"
-        //TODO: Hide this and get it from user input
-        static let APIAuthToken = "MIVA-HMAC-SHA1 \(getAPIKey())"
     }
 }
 
 extension APIConstants {
-    //MARK: Utility Functions
-    private static func getAPIAuthToken() -> String {
-        let authType = getAuthType()
-        let apiKey = getAPIKey()
-        let hmacHash = getHmacHash()
-
-        return authType + " " + apiKey + hmacHash
-    }
-    
-    private static func getHmacHash() -> String {
-        //TODO: If hmac hash is on, add hashed string
-        if true {
-            return ":" + 
-        } else {
-            return ""
-        }
-    }
-    
-    private static func getAuthType() -> String {
-        var authTypeString = "MIVA"
-        //TODO: Update auth type string if hmac hash turned on
-        if true {
-            authTypeString += "-HMAC-SHA1"
-        }
-        
-        return authTypeString
-    }
-    
-    private static func getAPIKey() -> String {
-        guard let filePath = Bundle.main.path(forResource: "APIKey", ofType: "plist") else {
-            fatalError("Check file list for APIKey.plist")
-        }
-        
-        guard let dictionary = NSDictionary(contentsOfFile: filePath) as? [String : String] else {
-            fatalError("Could not get contents of file: \(filePath)")
-        }
-        
-        guard let apiKey = dictionary["APIKey"] else {
-            fatalError("No value for key \"apiKey\"")
-        }
-        
-        return apiKey
-    }
-    
     //MARK: Create User Agent String Functions
     //Code borrowed from https://github.com/WURFL/User-Agent-Native-apps/blob/master/swift/UABuilder.swift
     
     private static func UAString() -> String {
         let uaString = "\(appNameAndVersion()) \(deviceName()) \(deviceVersion()) \(CFNetworkVersion()) \(DarwinVersion())"
-        print("UAString: \(uaString)")
         return uaString
     }
     
@@ -125,28 +78,7 @@ extension APIConstants {
     }
     
     
-    //MARK: HMAC Signature
-    static func HMAC(requestBody: Data, key: [UInt8]) -> String {
-//        guard let decodedString = key.base64Decoded() else {
-//            //TODO: Error reporting
-//            fatalError("Unable to decode Signature Key")
-//        }
-        let bodyString = String(data: requestBody, encoding: .utf8)!
-        let hmacSha1Body = bodyString.hmac(algorithm: .sha1, key: key)
-        let hmacSha1BodyData = hmacSha1Body.data(using: .utf8)!
-        let base64hash = hmacSha1Body
-        print(base64hash)
-        return base64hash
-//      xa+jN8erZe1RLoio5OJl6K/7gtz/IVJFQ5IRGm9Tnd0=
-    }
-}
 
-extension String {
-    func base64Decoded() -> String? {
-        //TODO: Fix this code!
-        let data = Data(base64Encoded: self)!
-        return data.map { String(format: "%02hhx", $0 as CVarArg) }.joined()
-    }
 }
 
 

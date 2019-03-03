@@ -82,7 +82,7 @@
 		F4D8D52D222530C100F210D5 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
 		F4D8D52F22263D4E00F210D5 /* UnofficialMivaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnofficialMivaApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4D8D53022263DEF00F210D5 /* HMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
-		F4D8D536222A5D9C00F210D5 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthClient.swift; path = MivaOrders/Model/AuthClient.swift; sourceTree = "<group>"; };
+		F4D8D536222A5D9C00F210D5 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,6 @@
 		F487B1E92179A805006A54B6 = {
 			isa = PBXGroup;
 			children = (
-				F4D8D536222A5D9C00F210D5 /* AuthClient.swift */,
 				F487B1F42179A805006A54B6 /* MivaOrders */,
 				F487B1F32179A805006A54B6 /* Products */,
 			);
@@ -184,6 +183,7 @@
 				F4A30C8D2223BB1D00AADD9B /* MivaClient.swift */,
 				F4A30C912225048900AADD9B /* MivaClient+Functions.swift */,
 				F4A30C8F2224EA4400AADD9B /* APIConstants.swift */,
+				F4D8D536222A5D9C00F210D5 /* AuthClient.swift */,
 			);
 			path = NetworkRequests;
 			sourceTree = "<group>";

@@ -52,7 +52,7 @@ enum HmacAlgorithm {
 
 extension String {
     
-    func hmac(algorithm: HmacAlgorithm, key: [UInt8]) -> String {
+    func hmac(algorithm: HmacAlgorithm, key: [UInt8]) -> Data {
         let str = self.cString(using: .utf8)
         let strLen = Int(self.lengthOfBytes(using: .utf8))
         let digestLen = algorithm.digestLength
@@ -62,13 +62,11 @@ extension String {
         
         CCHmac(algorithm.algorithm, keyStr, keyLen, str!, strLen, result)
         let digestData = Data(bytes: result, count: algorithm.digestLength)
-        let digestString = digestData.base64EncodedString()
         
-//        let digest = stringFromResult(result: result, length: digestLen)
-        
+        //Deallocate the results pointer since its not needed anymore
         result.deallocate()
         
-        return digestString
+        return digestData
     }
     
     //TODO: Maybe remove this

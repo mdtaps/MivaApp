@@ -17,12 +17,16 @@ public enum Result<T> {
 
 class MivaClient {
     static var shared = MivaClient()
+    lazy var jsonRequestData: Data = {
+        return getRequestBody()
+    }()
+    
     private init() { }
     
     let session = URLSession.shared
     
     //Miva documentation: https://docs.miva.com/json-api/
-    func mivaPUTRequestWith(completionHandler: @escaping (_ dataRequest: Result<Data>) -> Void) {
+    func mivaPUTRequest(with completionHandler: @escaping (_ dataRequest: Result<Data>) -> Void) {
         
         //Set URL
         guard let url = mivaPOSTRequestUrl() else {
@@ -59,9 +63,7 @@ class MivaClient {
                 return
                 
             }
-            
-            print(data)
-            
+                        
             completionHandler(.Success(with: data))
             
         }
@@ -87,20 +89,10 @@ extension MivaClient {
     fileprivate func getMivaRequestFrom(url: URL) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let data = getHttpBody()
-        let key = getDecodedKey(encodedKeyString: "cG6+9NUT7n5+rvw0lLsl4eq3OnKF2AT02ceAKNOWkFU")
-//        let key = "This is my special test key for Miva"
-        let hmacString = APIConstants.HMAC(requestBody: data, key: key)
-        request.httpBody = getHttpBody()
-        request.allHTTPHeaderFields = getHttpHeaders(hmac: hmacString)
+        request.httpBody = getRequestBody()
+        request.allHTTPHeaderFields = getHttpHeaders()
         
         return request
-    }
-    
-    private func getDecodedKey(encodedKeyString: String) -> [UInt8] {
-        let lengthCorrectedKey = encodedKeyString.base64lengthCorrected()
-        let decodedKey = Data(base64Encoded: lengthCorrectedKey)!
-        return [UInt8](decodedKey)
     }
 }
 
