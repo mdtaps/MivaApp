@@ -20,7 +20,7 @@
 		F487B2002179A807006A54B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F487B1FF2179A807006A54B6 /* Assets.xcassets */; };
 		F487B2032179A807006A54B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F487B2012179A807006A54B6 /* LaunchScreen.storyboard */; };
 		F4896D27222BB63B00BF2B77 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D26222BB63B00BF2B77 /* CoreDataViewController.swift */; };
-		F4896D2B222BBECF00BF2B77 /* UserConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D2A222BBECF00BF2B77 /* UserConnection.swift */; };
+		F4896D2B222BBECF00BF2B77 /* UserAuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D2A222BBECF00BF2B77 /* UserAuthDataModel.swift */; };
 		F4A30C622221D6A300AADD9B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C612221D6A300AADD9B /* Customer.swift */; };
 		F4A30C642221D6C700AADD9B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C632221D6C700AADD9B /* Item.swift */; };
 		F4A30C662221D6E400AADD9B /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C652221D6E400AADD9B /* Charge.swift */; };
@@ -65,7 +65,7 @@
 		F487B2022179A807006A54B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F487B2042179A807006A54B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4896D26222BB63B00BF2B77 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
-		F4896D2A222BBECF00BF2B77 /* UserConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConnection.swift; sourceTree = "<group>"; };
+		F4896D2A222BBECF00BF2B77 /* UserAuthDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthDataModel.swift; sourceTree = "<group>"; };
 		F4A30C612221D6A300AADD9B /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		F4A30C632221D6C700AADD9B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F4A30C652221D6E400AADD9B /* Charge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D8D536222A5D9C00F210D5 /* AuthClient.swift */,
-				F4896D2A222BBECF00BF2B77 /* UserConnection.swift */,
+				F4896D2A222BBECF00BF2B77 /* UserAuthDataModel.swift */,
 				F4D8D52F22263D4E00F210D5 /* UnofficialMivaApp-Bridging-Header.h */,
 				F4D8D53022263DEF00F210D5 /* HMAC.swift */,
 			);
@@ -313,7 +313,7 @@
 				F4A30C8B22236BD000AADD9B /* PaymentData.swift in Sources */,
 				F4A30C682221D6FB00AADD9B /* Coupon.swift in Sources */,
 				F4A30C8E2223BB1D00AADD9B /* MivaClient.swift in Sources */,
-				F4896D2B222BBECF00BF2B77 /* UserConnection.swift in Sources */,
+				F4896D2B222BBECF00BF2B77 /* UserAuthDataModel.swift in Sources */,
 				F4A30C642221D6C700AADD9B /* Item.swift in Sources */,
 				F4A30C712221D91B00AADD9B /* CustomFieldValues.swift in Sources */,
 				F4100EB72186C77500B4880A /* OrderRequest.swift in Sources */,

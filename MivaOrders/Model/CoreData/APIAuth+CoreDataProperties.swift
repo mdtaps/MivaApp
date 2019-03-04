@@ -18,7 +18,7 @@ extension APIAuth {
     }
 
     @NSManaged public var apiKey: String
-    @NSManaged public var signatureOn: Bool
+    @NSManaged public var signatureIsOn: Bool
     @NSManaged public var signatureKey: String?
     @NSManaged public var storeCode: String?
 
