@@ -21,6 +21,7 @@
 		F487B2032179A807006A54B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F487B2012179A807006A54B6 /* LaunchScreen.storyboard */; };
 		F4896D27222BB63B00BF2B77 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D26222BB63B00BF2B77 /* CoreDataViewController.swift */; };
 		F4896D2B222BBECF00BF2B77 /* UserAuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D2A222BBECF00BF2B77 /* UserAuthDataModel.swift */; };
+		F4896D2E222D1EB500BF2B77 /* MivaRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D2D222D1EB500BF2B77 /* MivaRequestStatus.swift */; };
 		F4A30C622221D6A300AADD9B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C612221D6A300AADD9B /* Customer.swift */; };
 		F4A30C642221D6C700AADD9B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C632221D6C700AADD9B /* Item.swift */; };
 		F4A30C662221D6E400AADD9B /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C652221D6E400AADD9B /* Charge.swift */; };
@@ -66,6 +67,7 @@
 		F487B2042179A807006A54B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4896D26222BB63B00BF2B77 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		F4896D2A222BBECF00BF2B77 /* UserAuthDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthDataModel.swift; sourceTree = "<group>"; };
+		F4896D2D222D1EB500BF2B77 /* MivaRequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MivaRequestStatus.swift; sourceTree = "<group>"; };
 		F4A30C612221D6A300AADD9B /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		F4A30C632221D6C700AADD9B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F4A30C652221D6E400AADD9B /* Charge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 			path = MivaOrders;
 			sourceTree = "<group>";
 		};
+		F4896D2C222D16BF00BF2B77 /* OrderRequest */ = {
+			isa = PBXGroup;
+			children = (
+				F4100EB62186C77500B4880A /* OrderRequest.swift */,
+			);
+			path = OrderRequest;
+			sourceTree = "<group>";
+		};
 		F4A30C6D2221D75D00AADD9B /* OrderResponse */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +190,6 @@
 				F4A30C8A22236BD000AADD9B /* PaymentData.swift */,
 				F4A30C6B2221D72200AADD9B /* Note.swift */,
 				F4A30C702221D91B00AADD9B /* CustomFieldValues.swift */,
-				F4100EB62186C77500B4880A /* OrderRequest.swift */,
 			);
 			path = OrderResponse;
 			sourceTree = "<group>";
@@ -204,6 +213,7 @@
 				F4801BC1222B6BC1001F91FD /* Authorization */,
 				F4A30C8C2223BA6B00AADD9B /* NetworkRequests */,
 				F4A30C762221E17800AADD9B /* Status */,
+				F4896D2C222D16BF00BF2B77 /* OrderRequest */,
 				F4A30C6D2221D75D00AADD9B /* OrderResponse */,
 			);
 			path = Model;
@@ -214,6 +224,7 @@
 			children = (
 				F4A30C8D2223BB1D00AADD9B /* MivaClient.swift */,
 				F4A30C912225048900AADD9B /* MivaClient+Functions.swift */,
+				F4896D2D222D1EB500BF2B77 /* MivaRequestStatus.swift */,
 				F4A30C8F2224EA4400AADD9B /* APIConstants.swift */,
 			);
 			path = NetworkRequests;
@@ -308,6 +319,7 @@
 				F4A30C7C2221FFBA00AADD9B /* Option.swift in Sources */,
 				F487B1FE2179A805006A54B6 /* MivaOrders.xcdatamodeld in Sources */,
 				F4A30C782221E19300AADD9B /* PaymentStatus.swift in Sources */,
+				F4896D2E222D1EB500BF2B77 /* MivaRequestStatus.swift in Sources */,
 				F4A30C662221D6E400AADD9B /* Charge.swift in Sources */,
 				F4A30C6F2221D8EE00AADD9B /* Discount.swift in Sources */,
 				F4A30C8B22236BD000AADD9B /* PaymentData.swift in Sources */,
