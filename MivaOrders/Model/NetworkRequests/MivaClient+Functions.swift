@@ -9,7 +9,9 @@
 import Foundation
 
 extension MivaClient {
-    func requestStoreData(_ completionHandler: @escaping (_ response: Result<OrderResponse>) -> Void ) {
+    func requestStoreData(using userData: APIAuth? = nil, _ completionHandler: @escaping (_ response: Result<OrderResponse>) -> Void ) {
+        setUserAuthData(with: userData)
+        
         MivaClient.shared.mivaPUTRequest { (response) in
             switch response {
             case .Failure(with: let failureString):
@@ -84,7 +86,7 @@ extension MivaClient {
     func getRequestBody() -> Data {
         let timeStamp = String(Int64(floor(Date().timeIntervalSince1970)))
         let requestObject = OrderRequest(mivaRequestTimeStamp: timeStamp,
-                                         storeCode: "somesock",
+                                         storeCode: userAuthData.storeCode,
                                          function: "OrderList_Load_Query",
                                          count: 0,
                                          offset: 0,
@@ -101,18 +103,35 @@ extension MivaClient {
     
     func getHttpHeaders() -> [String: String] {
         var httpHeaders = [String: String]()
-        httpHeaders[APIConstants.RequestHeaderKeys.Host] = APIConstants.RequestHeaderValues.Host
+        httpHeaders[APIConstants.RequestHeaderKeys.Host] = userAuthData.storeUrl
         httpHeaders[APIConstants.RequestHeaderKeys.UserAgent] = APIConstants.RequestHeaderValues.UserAgent
         httpHeaders[APIConstants.RequestHeaderKeys.ContentType] = APIConstants.RequestHeaderValues.ContentType
-        //TODO:
         httpHeaders[APIConstants.RequestHeaderKeys.APIAuthToken] = getAPIAuthToken()
         
         return httpHeaders
     }
     
     private func getAPIAuthToken() -> String {
-        let authClient = AuthClient(messageData: getRequestBody())
+        let authClient = AuthClient(messageData: jsonRequestData,
+                                    apiKey: userAuthData.apiKey,
+                                    hmacIsEnabled: userAuthData.signatureIsOn,
+                                    signatureKey: userAuthData.signatureKey)
         let token = authClient.getAuthToken()
         return token
+    }
+}
+
+extension MivaClient {
+    private func setUserAuthData(with userData: APIAuth?) {
+        if let userData = userData {
+            self.userAuthData = userData
+        } else {
+            let frController = coreDataUtility.fetchedResultsController ?? coreDataUtility.createFetchedResultsController(for: APIAuth.self)
+            if let apiAuth = frController.fetchedObjects?.first as? APIAuth {
+                userAuthData = apiAuth
+            } else {
+                fatalError("Error getting APIAuth from fetched objects in MivaClient.setUserAuthData")
+            }
+        }
     }
 }

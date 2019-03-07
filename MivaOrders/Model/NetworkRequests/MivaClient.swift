@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 public enum Result<T> {
     case Success(with: T)
     case Failure(with: String)
@@ -17,6 +15,8 @@ public enum Result<T> {
 
 class MivaClient {
     static var shared = MivaClient()
+    let coreDataUtility = CoreDataUtility()
+    var userAuthData: APIAuth!
     lazy var jsonRequestData: Data = {
         return getRequestBody()
     }()
@@ -26,7 +26,7 @@ class MivaClient {
     let session = URLSession.shared
     
     //Miva documentation: https://docs.miva.com/json-api/
-    func mivaPUTRequest(with completionHandler: @escaping (_ dataRequest: Result<Data>) -> Void) {
+    func mivaPUTRequest(_ completionHandler: @escaping (_ dataRequest: Result<Data>) -> Void) {
         
         //Set URL
         guard let url = mivaPOSTRequestUrl() else {
@@ -80,7 +80,7 @@ extension MivaClient {
     fileprivate func mivaPOSTRequestUrl() -> URL? {
         var components = URLComponents()
         components.scheme = APIConstants.UrlComponents.Scheme
-        components.host = APIConstants.UrlComponents.Host
+        components.host = userAuthData.storeUrl
         components.path = APIConstants.UrlComponents.Path
         
         return components.url
@@ -93,13 +93,5 @@ extension MivaClient {
         request.allHTTPHeaderFields = getHttpHeaders()
         
         return request
-    }
-}
-
-extension String {
-    func base64lengthCorrected() -> String {
-        return self.padding(toLength: ((self.count+3)/4)*4,
-                            withPad: "=",
-                            startingAt: 0)
     }
 }

@@ -9,8 +9,8 @@
 import Foundation
 
 struct OrderRequest: Encodable {
-    let mivaRequestTimeStamp: String?
-    let storeCode: String
+    let mivaRequestTimeStamp: String
+    let storeCode: String?
     let function: String
     let count: Int
     let offset: Int

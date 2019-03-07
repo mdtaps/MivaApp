@@ -7,25 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        guard let entity = NSEntityDescription.insertNewObject(forEntityName: "APIAuth", into: appDelegate.stack.context) as? APIAuth else {
+            //TODO: Error handling
+            fatalError()
+        }
+        entity.apiKey = "7e49a75d33be1ae45fe90cfd6c94123b"
+        entity.signatureKey = "TlZ7Xuk3T8Oqonxj422LVcQtfXDGSpEq0c/zJteY5Cg"
+        entity.storeCode = "somesock"
+        entity.signatureIsOn = true
+        entity.storeUrl = "dts3211.mivamerchantdev.com"
         
-        MivaClient.shared.mivaPUTRequest { result in
+        let apiAuth = APIAuth(context: appDelegate.stack.context)
+        
+        MivaClient.shared.requestStoreData(using: entity) { result in
             switch result {
             case .Failure(with: let failureString):
                 //TODO: Handle failure
                 print(failureString)
-            case .Success(with: let data):
-                let decoder = JSONDecoder()
-                do {
-                    let mivaOrders = try decoder.decode(OrderResponse.self, from: data)
-                } catch {
-                    //TODO: Handle error
-                    print("Error: \(error)")
-                }
+            case .Success(with: let responseObject):
+                print(responseObject)
             }
         }
     }

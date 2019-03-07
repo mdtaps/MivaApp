@@ -1,5 +1,5 @@
 //
-//  CoreDataViewController.swift
+//  CoreDataUtility.swift
 //  MivaOrders
 //
 //  Created by Mark Tapia on 3/2/19.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class CoreDataViewController: UIViewController {
+struct CoreDataUtility {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -25,20 +25,13 @@ class CoreDataViewController: UIViewController {
         }
     }
     
-    func createFetchedResultsController(for managedObject: NSManagedObject.Type, sortingBy descriptor: String? = nil) -> NSFetchedResultsController<NSFetchRequestResult> {
+    func createFetchedResultsController(for managedObject: NSManagedObject.Type) -> NSFetchedResultsController<NSFetchRequestResult> {
         
         //Create fetch request
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = managedObject.fetchRequest()
         
-        //Add sort descriptors
-        var descriptors = [NSSortDescriptor]()
-        descriptors.append(NSSortDescriptor(key: "category.name", ascending: true))
-        
-        fetchRequest.sortDescriptors = descriptors
-        
         //Return fetchedResultsController
-        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.stack.context, sectionNameKeyPath: "category.name", cacheName: nil)
-        
+        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.stack.context, sectionNameKeyPath: nil, cacheName: nil)
     }
 }
 

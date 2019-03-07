@@ -19,7 +19,7 @@
 		F487B1FE2179A805006A54B6 /* MivaOrders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F487B1FC2179A805006A54B6 /* MivaOrders.xcdatamodeld */; };
 		F487B2002179A807006A54B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F487B1FF2179A807006A54B6 /* Assets.xcassets */; };
 		F487B2032179A807006A54B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F487B2012179A807006A54B6 /* LaunchScreen.storyboard */; };
-		F4896D27222BB63B00BF2B77 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D26222BB63B00BF2B77 /* CoreDataViewController.swift */; };
+		F4896D27222BB63B00BF2B77 /* CoreDataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D26222BB63B00BF2B77 /* CoreDataUtility.swift */; };
 		F4896D2B222BBECF00BF2B77 /* UserAuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D2A222BBECF00BF2B77 /* UserAuthDataModel.swift */; };
 		F4896D2E222D1EB500BF2B77 /* MivaRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D2D222D1EB500BF2B77 /* MivaRequestStatus.swift */; };
 		F4A30C622221D6A300AADD9B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C612221D6A300AADD9B /* Customer.swift */; };
@@ -65,7 +65,7 @@
 		F487B1FF2179A807006A54B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F487B2022179A807006A54B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F487B2042179A807006A54B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4896D26222BB63B00BF2B77 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		F4896D26222BB63B00BF2B77 /* CoreDataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtility.swift; sourceTree = "<group>"; };
 		F4896D2A222BBECF00BF2B77 /* UserAuthDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthDataModel.swift; sourceTree = "<group>"; };
 		F4896D2D222D1EB500BF2B77 /* MivaRequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MivaRequestStatus.swift; sourceTree = "<group>"; };
 		F4A30C612221D6A300AADD9B /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
@@ -115,6 +115,7 @@
 				F4801BBC222B6B33001F91FD /* APIAuth+CoreDataClass.swift */,
 				F4801BBD222B6B33001F91FD /* APIAuth+CoreDataProperties.swift */,
 				F4801BC2222B8546001F91FD /* CoreDataStack.swift */,
+				F4896D26222BB63B00BF2B77 /* CoreDataUtility.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -151,7 +152,6 @@
 			children = (
 				F487B1F52179A805006A54B6 /* AppDelegate.swift */,
 				F487B1F72179A805006A54B6 /* ViewController.swift */,
-				F4896D26222BB63B00BF2B77 /* CoreDataViewController.swift */,
 				F487B1F92179A805006A54B6 /* Main.storyboard */,
 				F4A30C87222362E200AADD9B /* Model */,
 				F487B1FF2179A807006A54B6 /* Assets.xcassets */,
@@ -305,7 +305,7 @@
 				F4A30C922225048900AADD9B /* MivaClient+Functions.swift in Sources */,
 				F4A30C7A2221E1AD00AADD9B /* StockStatus.swift in Sources */,
 				F4A30C752221D9EC00AADD9B /* OrderData.swift in Sources */,
-				F4896D27222BB63B00BF2B77 /* CoreDataViewController.swift in Sources */,
+				F4896D27222BB63B00BF2B77 /* CoreDataUtility.swift in Sources */,
 				F4100EB92186CFFA00B4880A /* OrderStatus.swift in Sources */,
 				F4A30C622221D6A300AADD9B /* Customer.swift in Sources */,
 				F4801BBF222B6B33001F91FD /* APIAuth+CoreDataProperties.swift in Sources */,
