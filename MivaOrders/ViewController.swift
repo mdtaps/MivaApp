@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         entity.signatureIsOn = true
         entity.storeUrl = "dts3211.mivamerchantdev.com"
         
-        let apiAuth = APIAuth(context: appDelegate.stack.context)
-        
         MivaClient.shared.requestStoreData(using: entity) { result in
             switch result {
             case .Failure(with: let failureString):
@@ -35,6 +33,11 @@ class ViewController: UIViewController {
                 print(responseObject)
             }
         }
+    }
+    
+    enum ErrorsToThrow: Error {
+        case NoSignatureKeyWhenSignatureIsOn
+        case SignatureKeyNotLongEnough
     }
 }
 

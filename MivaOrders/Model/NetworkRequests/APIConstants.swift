@@ -12,9 +12,6 @@ import UIKit
 struct APIConstants {
     struct UrlComponents {
         static let Scheme = "https"
-        //TODO: Get Host from user
-        static let Host = "dts3211.mivamerchantdev.com"
-        //TODO: Get public folder path
         static let PublicFolderPath = "/mm5"
         static let Path = APIConstants.UrlComponents.PublicFolderPath + "/json.mvc"
     }
@@ -29,7 +26,6 @@ struct APIConstants {
     }
     
     struct RequestHeaderValues {
-        static let Host = "dts3211.mivamerchantdev.com"
         static let UserAgent = UAString()
         static let ContentType = "application/json"
     }
