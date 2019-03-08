@@ -24,7 +24,9 @@ class ViewController: UIViewController {
         entity.signatureIsOn = true
         entity.storeUrl = "dts3211.mivamerchantdev.com"
         
-        MivaClient.shared.requestStoreData(using: entity) { result in
+        appDelegate.stack.save()
+        
+        MivaClient.shared.requestStoreData { result in
             switch result {
             case .Failure(with: let failureString):
                 //TODO: Handle failure

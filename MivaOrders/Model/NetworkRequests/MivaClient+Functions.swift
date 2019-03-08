@@ -124,10 +124,13 @@ extension MivaClient {
 extension MivaClient {
     private func setUserAuthData(with userData: APIAuth?) {
         if let userData = userData {
-            self.userAuthData = userData
+            userAuthData = userData
         } else {
-            let frController = coreDataUtility.fetchedResultsController ?? coreDataUtility.createFetchedResultsController(for: APIAuth.self)
-            if let apiAuth = frController.fetchedObjects?.first as? APIAuth {
+            if coreDataUtility.fetchedResultsController == nil {
+                coreDataUtility.fetchedResultsController = coreDataUtility.createFetchedResultsController(for: APIAuth.self)
+            }
+            
+            if let apiAuth = coreDataUtility.fetchedResultsController?.fetchedObjects?.first as? APIAuth {
                 userAuthData = apiAuth
             } else {
                 fatalError("Error getting APIAuth from fetched objects in MivaClient.setUserAuthData")

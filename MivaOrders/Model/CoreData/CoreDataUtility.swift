@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-struct CoreDataUtility {
+class CoreDataUtility {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -29,6 +29,8 @@ struct CoreDataUtility {
         
         //Create fetch request
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = managedObject.fetchRequest()
+        
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "apiKey", ascending: true)]
         
         //Return fetchedResultsController
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDelegate.stack.context, sectionNameKeyPath: nil, cacheName: nil)
