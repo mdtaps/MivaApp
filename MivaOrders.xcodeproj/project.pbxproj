@@ -14,13 +14,14 @@
 		F4801BBF222B6B33001F91FD /* APIAuth+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4801BBD222B6B33001F91FD /* APIAuth+CoreDataProperties.swift */; };
 		F4801BC3222B8546001F91FD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4801BC2222B8546001F91FD /* CoreDataStack.swift */; };
 		F487B1F62179A805006A54B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F487B1F52179A805006A54B6 /* AppDelegate.swift */; };
-		F487B1F82179A805006A54B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F487B1F72179A805006A54B6 /* ViewController.swift */; };
+		F487B1F82179A805006A54B6 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F487B1F72179A805006A54B6 /* OrdersViewController.swift */; };
 		F487B1FB2179A805006A54B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F487B1F92179A805006A54B6 /* Main.storyboard */; };
 		F487B1FE2179A805006A54B6 /* MivaOrders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F487B1FC2179A805006A54B6 /* MivaOrders.xcdatamodeld */; };
 		F487B2002179A807006A54B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F487B1FF2179A807006A54B6 /* Assets.xcassets */; };
 		F487B2032179A807006A54B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F487B2012179A807006A54B6 /* LaunchScreen.storyboard */; };
 		F4896D27222BB63B00BF2B77 /* CoreDataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D26222BB63B00BF2B77 /* CoreDataUtility.swift */; };
 		F4896D2E222D1EB500BF2B77 /* MivaRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D2D222D1EB500BF2B77 /* MivaRequestStatus.swift */; };
+		F4896D3222359E5800BF2B77 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4896D3122359E5800BF2B77 /* OrderTableViewCell.swift */; };
 		F4A30C622221D6A300AADD9B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C612221D6A300AADD9B /* Customer.swift */; };
 		F4A30C642221D6C700AADD9B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C632221D6C700AADD9B /* Item.swift */; };
 		F4A30C662221D6E400AADD9B /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A30C652221D6E400AADD9B /* Charge.swift */; };
@@ -57,7 +58,7 @@
 		F4801BC2222B8546001F91FD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F487B1F22179A805006A54B6 /* MivaOrders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MivaOrders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F487B1F52179A805006A54B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F487B1F72179A805006A54B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F487B1F72179A805006A54B6 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		F487B1FA2179A805006A54B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F487B1FD2179A805006A54B6 /* MivaOrders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MivaOrders.xcdatamodel; sourceTree = "<group>"; };
 		F487B1FF2179A807006A54B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		F487B2042179A807006A54B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4896D26222BB63B00BF2B77 /* CoreDataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtility.swift; sourceTree = "<group>"; };
 		F4896D2D222D1EB500BF2B77 /* MivaRequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MivaRequestStatus.swift; sourceTree = "<group>"; };
+		F4896D3122359E5800BF2B77 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		F4A30C612221D6A300AADD9B /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		F4A30C632221D6C700AADD9B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F4A30C652221D6E400AADD9B /* Charge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
@@ -146,7 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				F487B1F52179A805006A54B6 /* AppDelegate.swift */,
-				F487B1F72179A805006A54B6 /* ViewController.swift */,
+				F487B1F72179A805006A54B6 /* OrdersViewController.swift */,
+				F4896D3122359E5800BF2B77 /* OrderTableViewCell.swift */,
 				F487B1F92179A805006A54B6 /* Main.storyboard */,
 				F4A30C87222362E200AADD9B /* Model */,
 				F487B1FF2179A807006A54B6 /* Assets.xcassets */,
@@ -196,6 +199,7 @@
 				F4A30C792221E1AD00AADD9B /* StockStatus.swift */,
 				F4A30C85222360C700AADD9B /* PaymentType.swift */,
 				F4A30C8822236A4900AADD9B /* DecryptionStatus.swift */,
+				F4896D2D222D1EB500BF2B77 /* MivaRequestStatus.swift */,
 			);
 			path = Status;
 			sourceTree = "<group>";
@@ -218,7 +222,6 @@
 			children = (
 				F4A30C8D2223BB1D00AADD9B /* MivaClient.swift */,
 				F4A30C912225048900AADD9B /* MivaClient+Functions.swift */,
-				F4896D2D222D1EB500BF2B77 /* MivaRequestStatus.swift */,
 				F4A30C8F2224EA4400AADD9B /* APIConstants.swift */,
 			);
 			path = NetworkRequests;
@@ -304,7 +307,7 @@
 				F4801BBF222B6B33001F91FD /* APIAuth+CoreDataProperties.swift in Sources */,
 				F4A30C86222360C700AADD9B /* PaymentType.swift in Sources */,
 				F4801BBE222B6B33001F91FD /* APIAuth+CoreDataClass.swift in Sources */,
-				F487B1F82179A805006A54B6 /* ViewController.swift in Sources */,
+				F487B1F82179A805006A54B6 /* OrdersViewController.swift in Sources */,
 				F4A30C8422235F5100AADD9B /* ItemDiscount.swift in Sources */,
 				F4A30C6A2221D71300AADD9B /* Payment.swift in Sources */,
 				F4A30C902224EA4400AADD9B /* APIConstants.swift in Sources */,
@@ -312,6 +315,7 @@
 				F4A30C7C2221FFBA00AADD9B /* Option.swift in Sources */,
 				F487B1FE2179A805006A54B6 /* MivaOrders.xcdatamodeld in Sources */,
 				F4A30C782221E19300AADD9B /* PaymentStatus.swift in Sources */,
+				F4896D3222359E5800BF2B77 /* OrderTableViewCell.swift in Sources */,
 				F4896D2E222D1EB500BF2B77 /* MivaRequestStatus.swift in Sources */,
 				F4A30C662221D6E400AADD9B /* Charge.swift in Sources */,
 				F4A30C6F2221D8EE00AADD9B /* Discount.swift in Sources */,

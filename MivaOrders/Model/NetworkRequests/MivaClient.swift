@@ -8,6 +8,7 @@
 
 import Foundation
 
+//TODO: Decide whether to change "String" to a generic
 public enum Result<T> {
     case Success(with: T)
     case Failure(with: String)
@@ -32,7 +33,6 @@ class MivaClient {
         guard let url = mivaPOSTRequestUrl() else {
             completionHandler(.Failure(with: "Invalid URL"))
             return
-            
         }
         
         let request = getMivaRequestFrom(url: url)
@@ -82,7 +82,7 @@ extension MivaClient {
         components.scheme = APIConstants.UrlComponents.Scheme
         components.host = userAuthData.storeUrl
         components.path = APIConstants.UrlComponents.Path
-        
+
         return components.url
     }
     

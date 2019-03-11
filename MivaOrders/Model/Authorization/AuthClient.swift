@@ -11,23 +11,24 @@ import Foundation
 struct AuthClient {
     let messageData: Data
     let apiKey: String
-    let hmacIsEnabled: Bool
+    let signatureIsEnabled: Bool
     let signatureKey: String?
     
     func getAuthToken() -> String {
-        let authType = hmacIsEnabled ? "MIVA-HMAC-SHA1" : "MIVA"
-        //TODO: Set signature key from CoreData store
-        let hmacSignature = hmacIsEnabled ? getHmacSignature() : ""
+        let authType = signatureIsEnabled ? "MIVA-HMAC-SHA1" : "MIVA"
+        let hmacSignature = signatureIsEnabled ? getHmacSignature() : ""
         
-        return "\(authType) \(apiKey)\(hmacSignature)"
+        let authToken = "\(authType) \(apiKey)\(hmacSignature)"
+        print(authToken)
+        return authToken
     }
     
     //MARK: HMAC Signature
-    func getHmacSignature() -> String {
+    private func getHmacSignature() -> String {
         guard let signatureKey = signatureKey else {
             return ""
         }
-        //TODO: If hmac set up, return encoded hash. Else, return nil
+
         let messageString = String(data: messageData, encoding: .utf8)!
         //Base64 Decode Signature Key
         let decodedKey = getDecodedKey(encodedKeyString: signatureKey)

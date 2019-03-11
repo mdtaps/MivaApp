@@ -22,7 +22,7 @@ extension MivaClient {
                     case .Failure(with: let failureString):
                         completionHandler(.Failure(with: failureString))
                     case .Success(with: let responseJson):
-                        let jsonResult = self.checkResponseStatusFor(response: responseJson)
+                        let jsonResult = self.checkResponseStatus(of: responseJson)
                         switch jsonResult {
                         case .Failure(with: let failureString):
                             completionHandler(.Failure(with: failureString))
@@ -46,7 +46,7 @@ extension MivaClient {
         }
     }
     
-    private func checkResponseStatusFor(response: OrderResponse) -> Result<OrderResponse> {
+    private func checkResponseStatus(of response: OrderResponse) -> Result<OrderResponse> {
         guard let status = MivaRequestStatus(rawValue: response.success) else {
             fatalError("Should always have respone JSON with a 'success' status")
         }
@@ -106,6 +106,7 @@ extension MivaClient {
         httpHeaders[APIConstants.RequestHeaderKeys.Host] = userAuthData.storeUrl
         httpHeaders[APIConstants.RequestHeaderKeys.UserAgent] = APIConstants.RequestHeaderValues.UserAgent
         httpHeaders[APIConstants.RequestHeaderKeys.ContentType] = APIConstants.RequestHeaderValues.ContentType
+        httpHeaders[APIConstants.RequestHeaderKeys.Accept] = APIConstants.RequestHeaderValues.Accept
         httpHeaders[APIConstants.RequestHeaderKeys.APIAuthToken] = getAPIAuthToken()
         
         return httpHeaders
@@ -114,7 +115,7 @@ extension MivaClient {
     private func getAPIAuthToken() -> String {
         let authClient = AuthClient(messageData: jsonRequestData,
                                     apiKey: userAuthData.apiKey,
-                                    hmacIsEnabled: userAuthData.signatureIsOn,
+                                    signatureIsEnabled: userAuthData.signatureIsOn,
                                     signatureKey: userAuthData.signatureKey)
         let token = authClient.getAuthToken()
         return token

@@ -28,6 +28,7 @@ struct APIConstants {
     struct RequestHeaderValues {
         static let UserAgent = UAString()
         static let ContentType = "application/json"
+        static let Accept = "*/*"
     }
 }
 

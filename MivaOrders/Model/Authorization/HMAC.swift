@@ -68,14 +68,4 @@ extension String {
         
         return digestData
     }
-    
-    //TODO: Maybe remove this
-    private func stringFromResult(result: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String {
-        let hash = NSMutableString()
-        for i in 0..<length {
-            hash.appendFormat("%02x", result[i])
-        }
-        return String(hash)
-    }
-    
 }
