@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F4100EB72186C77500B4880A /* OrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4100EB62186C77500B4880A /* OrderRequest.swift */; };
 		F4100EB92186CFFA00B4880A /* OrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4100EB82186CFFA00B4880A /* OrderStatus.swift */; };
+		F41E886A2251608600F57097 /* AuthenticateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E88682251608600F57097 /* AuthenticateViewController.swift */; };
+		F41E886B2251608600F57097 /* AuthenticateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41E88692251608600F57097 /* AuthenticateViewController.xib */; };
 		F43CD95521817D2800772394 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CD95421817D2800772394 /* OrderResponse.swift */; };
 		F4801BBE222B6B33001F91FD /* APIAuth+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4801BBC222B6B33001F91FD /* APIAuth+CoreDataClass.swift */; };
 		F4801BBF222B6B33001F91FD /* APIAuth+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4801BBD222B6B33001F91FD /* APIAuth+CoreDataProperties.swift */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		F4100EB62186C77500B4880A /* OrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequest.swift; sourceTree = "<group>"; };
 		F4100EB82186CFFA00B4880A /* OrderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatus.swift; sourceTree = "<group>"; };
+		F41E88682251608600F57097 /* AuthenticateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateViewController.swift; sourceTree = "<group>"; };
+		F41E88692251608600F57097 /* AuthenticateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticateViewController.xib; sourceTree = "<group>"; };
 		F43CD95421817D2800772394 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
 		F4801BBC222B6B33001F91FD /* APIAuth+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIAuth+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F4801BBD222B6B33001F91FD /* APIAuth+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIAuth+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				F487B1F72179A805006A54B6 /* OrdersViewController.swift */,
 				F4896D3122359E5800BF2B77 /* OrderTableViewCell.swift */,
 				F487B1F92179A805006A54B6 /* Main.storyboard */,
+				F41E88682251608600F57097 /* AuthenticateViewController.swift */,
+				F41E88692251608600F57097 /* AuthenticateViewController.xib */,
 				F4A30C87222362E200AADD9B /* Model */,
 				F487B1FF2179A807006A54B6 /* Assets.xcassets */,
 				F487B2012179A807006A54B6 /* LaunchScreen.storyboard */,
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F487B2032179A807006A54B6 /* LaunchScreen.storyboard in Resources */,
+				F41E886B2251608600F57097 /* AuthenticateViewController.xib in Resources */,
 				F487B2002179A807006A54B6 /* Assets.xcassets in Resources */,
 				F487B1FB2179A805006A54B6 /* Main.storyboard in Resources */,
 			);
@@ -322,6 +329,7 @@
 				F4A30C8B22236BD000AADD9B /* PaymentData.swift in Sources */,
 				F4A30C682221D6FB00AADD9B /* Coupon.swift in Sources */,
 				F4A30C8E2223BB1D00AADD9B /* MivaClient.swift in Sources */,
+				F41E886A2251608600F57097 /* AuthenticateViewController.swift in Sources */,
 				F4A30C642221D6C700AADD9B /* Item.swift in Sources */,
 				F4A30C712221D91B00AADD9B /* CustomFieldValues.swift in Sources */,
 				F4100EB72186C77500B4880A /* OrderRequest.swift in Sources */,
