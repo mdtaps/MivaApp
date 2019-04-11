@@ -22,6 +22,5 @@ extension APIAuth {
     @NSManaged public var signatureKey: String?
     @NSManaged public var storeCode: String?
     @NSManaged public var storeUrl: String
-    //TODO: Add url path as optional data
-
+    @NSManaged public var urlPath: String?
 }
