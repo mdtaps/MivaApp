@@ -11,6 +11,7 @@
 		F4100EB92186CFFA00B4880A /* OrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4100EB82186CFFA00B4880A /* OrderStatus.swift */; };
 		F41E886A2251608600F57097 /* AuthenticateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E88682251608600F57097 /* AuthenticateViewController.swift */; };
 		F41E886B2251608600F57097 /* AuthenticateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41E88692251608600F57097 /* AuthenticateViewController.xib */; };
+		F423F91422659F5400037205 /* APIAuthEntityCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423F91322659F5400037205 /* APIAuthEntityCreator.swift */; };
 		F43CD95521817D2800772394 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CD95421817D2800772394 /* OrderResponse.swift */; };
 		F4801BBE222B6B33001F91FD /* APIAuth+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4801BBC222B6B33001F91FD /* APIAuth+CoreDataClass.swift */; };
 		F4801BBF222B6B33001F91FD /* APIAuth+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4801BBD222B6B33001F91FD /* APIAuth+CoreDataProperties.swift */; };
@@ -56,6 +57,7 @@
 		F4100EB82186CFFA00B4880A /* OrderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatus.swift; sourceTree = "<group>"; };
 		F41E88682251608600F57097 /* AuthenticateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateViewController.swift; sourceTree = "<group>"; };
 		F41E88692251608600F57097 /* AuthenticateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticateViewController.xib; sourceTree = "<group>"; };
+		F423F91322659F5400037205 /* APIAuthEntityCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAuthEntityCreator.swift; sourceTree = "<group>"; };
 		F43CD95421817D2800772394 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
 		F4801BBC222B6B33001F91FD /* APIAuth+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIAuth+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F4801BBD222B6B33001F91FD /* APIAuth+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIAuth+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -155,8 +157,9 @@
 				F487B1F72179A805006A54B6 /* OrdersViewController.swift */,
 				F4896D3122359E5800BF2B77 /* OrderTableViewCell.swift */,
 				F487B1F92179A805006A54B6 /* Main.storyboard */,
-				F41E88682251608600F57097 /* AuthenticateViewController.swift */,
 				F41E88692251608600F57097 /* AuthenticateViewController.xib */,
+				F41E88682251608600F57097 /* AuthenticateViewController.swift */,
+				F423F91322659F5400037205 /* APIAuthEntityCreator.swift */,
 				F4A30C87222362E200AADD9B /* Model */,
 				F487B1FF2179A807006A54B6 /* Assets.xcassets */,
 				F487B2012179A807006A54B6 /* LaunchScreen.storyboard */,
@@ -315,6 +318,7 @@
 				F4A30C86222360C700AADD9B /* PaymentType.swift in Sources */,
 				F4801BBE222B6B33001F91FD /* APIAuth+CoreDataClass.swift in Sources */,
 				F487B1F82179A805006A54B6 /* OrdersViewController.swift in Sources */,
+				F423F91422659F5400037205 /* APIAuthEntityCreator.swift in Sources */,
 				F4A30C8422235F5100AADD9B /* ItemDiscount.swift in Sources */,
 				F4A30C6A2221D71300AADD9B /* Payment.swift in Sources */,
 				F4A30C902224EA4400AADD9B /* APIConstants.swift in Sources */,

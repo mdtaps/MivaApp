@@ -16,32 +16,6 @@ class OrdersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        guard let entity = NSEntityDescription.insertNewObject(forEntityName: "APIAuth", into: appDelegate.stack.context) as? APIAuth else {
-            //TODO: Error handling
-            fatalError()
-        }
-        entity.apiKey = "7e49a75d33be1ae45fe90cfd6c94123b"
-        entity.signatureKey = "v+/TYFqxlQ6pmwK6Gn9WBclGftoquXfQgY3t4luw2t4"
-        entity.storeCode = "somesock"
-        entity.signatureIsOn = true
-        entity.storeUrl = "dts3211.mivamerchantdev.com"
-        
-        appDelegate.stack.save()
-        
-        MivaClient.shared.requestStoreData { result in
-            switch result {
-            case .Failure(with: let failureString):
-                //TODO: Throw error
-                fatalError(failureString)
-            case .Success(with: let result):
-                self.orders = result
-                DispatchQueue.main.async {
-                    self.ordersTableView.reloadData()
-                }
-            }
-        }
-        
         ordersTableView.delegate = self
         ordersTableView.dataSource = self
 
