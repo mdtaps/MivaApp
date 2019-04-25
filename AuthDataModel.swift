@@ -10,6 +10,12 @@ import Foundation
 import CoreData
 import UIKit
 
+private enum AuthDataError: Error {
+    case NoApiKey
+    case InvalidApiKeyLength
+    case InvalidStoreUrlFormat
+}
+
 struct AuthDataModel {
     let apiKey: String
     let storeUrl: String
@@ -23,13 +29,21 @@ struct AuthDataModel {
         return signatureKey != nil
     }
     
-    init?(apiKey: String?, storeUrl: String?, signatureKey: String?, storeCode: String?, adminUrlPath: String?) {
-        guard let apiKey = apiKey, let storeUrl = storeUrl else {
-            return nil
+    init(apiKey: String?, storeUrl: String?, signatureKey: String?, storeCode: String?, adminUrlPath: String?) throws {
+        guard apiKey!.count == 32 else {
+            throw AuthDataError.InvalidApiKeyLength
         }
         
-        self.apiKey = apiKey
-        self.storeUrl = storeUrl
+        guard apiKey!.count > 0 else {
+            throw AuthDataError.NoApiKey
+        }
+        
+        guard apiKey != "", storeUrl!.isValidUrl() else {
+            throw AuthDataError.InvalidStoreUrlFormat
+        }
+        
+        self.apiKey = apiKey ?? ""
+        self.storeUrl = storeUrl ?? ""
         self.signatureKey = signatureKey
         self.storeCode = storeCode
         self.adminUrlPath = adminUrlPath
@@ -66,5 +80,14 @@ extension AuthDataModel {
         entity.urlPath = self.adminUrlPath
         
         return entity
+    }
+}
+
+extension String {
+    func isValidUrl() -> Bool {
+        let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+        let matches = detector.matches(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count))
+        
+        return !matches.isEmpty
     }
 }

@@ -23,14 +23,18 @@ class AuthenticateViewController: UIViewController {
 
 extension AuthenticateViewController {
     func submitUserData() {
-        guard let authDataModel = AuthDataModel(apiKey: apiKeyTextField.text,
-                                                storeUrl: storeUrlTextField.text,
-                                                signatureKey: signatureKeyTextField.text,
-                                                storeCode: storeCodeTextField.text,
-                                                adminUrlPath: adminUrlPathTextField.text) else {
-            //TODO: Launch alert
-            return
+        let authDataModel: AuthDataModel
+        do {
+            authDataModel = try AuthDataModel(apiKey: apiKeyTextField.text,
+                                              storeUrl: storeUrlTextField.text,
+                                              signatureKey: signatureKeyTextField.text,
+                                              storeCode: storeCodeTextField.text,
+                                              adminUrlPath: adminUrlPathTextField.text)
+        } catch {
+            //TODO: Handle error, launch alert
+            fatalError()
         }
+        
         
         authDataModel.submitAuthData { result in
             switch result {
