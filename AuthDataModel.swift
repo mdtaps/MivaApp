@@ -10,12 +10,11 @@ import Foundation
 import CoreData
 import UIKit
 
-private enum AuthDataError: Error {
+enum AuthDataError: Error {
     case NoApiKey
     case InvalidApiKeyLength
     case InvalidUrlFormat
     case NoStoreUrl
-    case Multiple([AuthDataError])
 }
 
 struct AuthDataModel {
@@ -32,24 +31,21 @@ struct AuthDataModel {
     }
     
     init(apiKey: String?, storeUrl: String?, signatureKey: String?, storeCode: String?, adminUrlPath: String?) throws {
-        var errors = [AuthDataError]()
-        
-        if apiKey!.count != 32 {
-            errors.append(AuthDataError.InvalidApiKeyLength)
-        } else if apiKey!.count == 0 {
-            errors.append(AuthDataError.NoApiKey)
+        //TODO: Look at possibly validating within a separate function
+        guard apiKey!.count == 32 else {
+            throw AuthDataError.InvalidApiKeyLength
         }
         
-        if storeUrl!.count == 0 {
-            errors.append(AuthDataError.NoStoreUrl)
+        guard apiKey!.count != 0 else {
+            throw AuthDataError.NoApiKey
         }
         
-        if !storeUrl!.isValidUrl() {
-            errors.append(AuthDataError.InvalidUrlFormat)
+        guard storeUrl!.count != 0 else {
+            throw AuthDataError.NoStoreUrl
         }
         
-        if !errors.isEmpty {
-            throw AuthDataError.Multiple(errors)
+        guard storeUrl!.isValidUrl() else {
+            throw AuthDataError.InvalidUrlFormat
         }
         
         self.apiKey = apiKey ?? ""

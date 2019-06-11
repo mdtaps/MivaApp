@@ -17,6 +17,11 @@ class AuthenticateViewController: UIViewController {
     @IBOutlet weak var storeCodeTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
+    @IBOutlet weak var storeUrlErrorLabel: UILabel!
+    @IBOutlet weak var apiKeyErrorLabel: UILabel!
+    @IBOutlet weak var adminPathErrorLabel: UILabel!
+    @IBOutlet weak var signatureKeyErrorLabel: UILabel!
+    @IBOutlet weak var storeCodeErrorLabel: UILabel!
     //TODO: Add Keyboard listener/delegate for error handling/displaying
     
     override func viewDidLoad() {
@@ -52,8 +57,17 @@ extension AuthenticateViewController {
                                               signatureKey: signatureKeyTextField.text,
                                               storeCode: storeCodeTextField.text,
                                               adminUrlPath: adminUrlPathTextField.text)
-        } catch {
+        } catch AuthDataError.InvalidApiKeyLength {
             //TODO: Handle error, launch alert
+            fatalError()
+        } catch AuthDataError.NoApiKey {
+            fatalError()
+        } catch AuthDataError.InvalidUrlFormat {
+            fatalError()
+        } catch AuthDataError.NoStoreUrl {
+            fatalError()
+        } catch {
+            //TODO: Remove this
             fatalError()
         }
         
