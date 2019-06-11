@@ -13,7 +13,9 @@ import UIKit
 private enum AuthDataError: Error {
     case NoApiKey
     case InvalidApiKeyLength
-    case InvalidStoreUrlFormat
+    case InvalidUrlFormat
+    case NoStoreUrl
+    case Multiple([AuthDataError])
 }
 
 struct AuthDataModel {
@@ -30,16 +32,24 @@ struct AuthDataModel {
     }
     
     init(apiKey: String?, storeUrl: String?, signatureKey: String?, storeCode: String?, adminUrlPath: String?) throws {
-        guard apiKey!.count == 32 else {
-            throw AuthDataError.InvalidApiKeyLength
+        var errors = [AuthDataError]()
+        
+        if apiKey!.count != 32 {
+            errors.append(AuthDataError.InvalidApiKeyLength)
+        } else if apiKey!.count == 0 {
+            errors.append(AuthDataError.NoApiKey)
         }
         
-        guard apiKey!.count > 0 else {
-            throw AuthDataError.NoApiKey
+        if storeUrl!.count == 0 {
+            errors.append(AuthDataError.NoStoreUrl)
         }
         
-        guard apiKey != "", storeUrl!.isValidUrl() else {
-            throw AuthDataError.InvalidStoreUrlFormat
+        if !storeUrl!.isValidUrl() {
+            errors.append(AuthDataError.InvalidUrlFormat)
+        }
+        
+        if !errors.isEmpty {
+            throw AuthDataError.Multiple(errors)
         }
         
         self.apiKey = apiKey ?? ""
@@ -65,6 +75,14 @@ struct AuthDataModel {
 }
 
 extension AuthDataModel {
+    static func validate(url: String, apiKey: String) -> Bool {
+        if url.isEmpty || apiKey.count < 32 { return false }
+        
+        if !url.isValidUrl() { return false }
+        
+        return true
+    }
+    
     private func makeEntity() -> APIAuth {
 
         guard let entity = NSEntityDescription.insertNewObject(forEntityName: "APIAuth", into: appDelegate.stack.context) as? APIAuth else {

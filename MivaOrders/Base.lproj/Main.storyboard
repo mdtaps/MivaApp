@@ -41,6 +41,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="requiredTextFieldDidChange:" destination="nDM-zJ-LKY" eventType="editingChanged" id="MLX-HK-E8n"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -62,6 +65,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="requiredTextFieldDidChange:" destination="nDM-zJ-LKY" eventType="editingChanged" id="xcj-LT-7Qt"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -221,6 +227,7 @@
                         <outlet property="signatureKeyTextField" destination="yqj-wr-dNK" id="dYN-Af-wup"/>
                         <outlet property="storeCodeTextField" destination="twq-xt-dOq" id="h00-KT-cZf"/>
                         <outlet property="storeUrlTextField" destination="Rg6-Tf-qGl" id="w15-qb-Prq"/>
+                        <outlet property="submitButton" destination="YgS-XX-z1n" id="avk-eJ-W90"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDW-Zd-bx4" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,14 +15,36 @@ class AuthenticateViewController: UIViewController {
     @IBOutlet weak var adminUrlPathTextField: UITextField!
     @IBOutlet weak var signatureKeyTextField: UITextField!
     @IBOutlet weak var storeCodeTextField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
+    
+    //TODO: Add Keyboard listener/delegate for error handling/displaying
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func requiredTextFieldDidChange(_ sender: UITextField) {
+        
+    }
     
     @IBAction func submitPressed(_ sender: UIButton) {
-        submitUserData()
+        if validateUserData() {
+            submitUserData()
+        }
     }
 }
 
 extension AuthenticateViewController {
-    func submitUserData() {
+    private func validateUserData() -> Bool {
+        let errorArray: [Error]
+        //TODO: Validate store URL
+        //TODO: Validate API Key
+        //TODO: Validate signature key
+        
+        return true
+    }
+    
+    private func submitUserData() {
         let authDataModel: AuthDataModel
         do {
             authDataModel = try AuthDataModel(apiKey: apiKeyTextField.text,
@@ -47,4 +69,8 @@ extension AuthenticateViewController {
             }
         }
     }
+}
+
+extension AuthenticateViewController: UITextFieldDelegate {
+    
 }
