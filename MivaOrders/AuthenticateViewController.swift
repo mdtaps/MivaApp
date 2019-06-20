@@ -26,6 +26,9 @@ class AuthenticateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        storeUrlTextField.delegate = self
+        apiKeyTextField.delegate = self
     }
     
     @IBAction func requiredTextFieldDidChange(_ sender: UITextField) {
@@ -33,9 +36,7 @@ class AuthenticateViewController: UIViewController {
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
-        if validateUserData() {
-            submitUserData()
-        }
+        submitUserData()
     }
 }
 
@@ -59,15 +60,24 @@ extension AuthenticateViewController {
                                               adminUrlPath: adminUrlPathTextField.text)
         } catch AuthDataError.InvalidApiKeyLength {
             //TODO: Handle error, launch alert
-            fatalError()
+            print("error caught")
+            apiKeyErrorLabel.isHidden = false
+            apiKeyErrorLabel.text = "apiKeyErrorLabel Error"
+            return
         } catch AuthDataError.NoApiKey {
-            fatalError()
+            apiKeyErrorLabel.isHidden = false
+            apiKeyErrorLabel.text = "apiKeyErrorLabel Error"
+            return
         } catch AuthDataError.InvalidUrlFormat {
-            fatalError()
+            storeUrlErrorLabel.isHidden = false
+            apiKeyErrorLabel.text = "storeUrlErrorLabel Error"
+            return
         } catch AuthDataError.NoStoreUrl {
-            fatalError()
+            storeUrlTextField.isHidden = false
+            apiKeyErrorLabel.text = "storeUrlErrorLabel Error"
+            return
         } catch {
-            //TODO: Remove this
+            //TODO: Figure out what to do about this error (An unknown error occured)
             fatalError()
         }
         
@@ -86,5 +96,8 @@ extension AuthenticateViewController {
 }
 
 extension AuthenticateViewController: UITextFieldDelegate {
-    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        apiKeyErrorLabel.isHidden = true
+        storeUrlErrorLabel.isHidden = true
+    }
 }

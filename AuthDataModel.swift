@@ -10,11 +10,11 @@ import Foundation
 import CoreData
 import UIKit
 
-enum AuthDataError: Error {
-    case NoApiKey
-    case InvalidApiKeyLength
-    case InvalidUrlFormat
-    case NoStoreUrl
+enum AuthDataError: String, Error {
+    case NoApiKey = "Please enter an API Key"
+    case InvalidApiKeyLength = "API Key must be 32 characters"
+    case InvalidUrlFormat = "Invalid URL format"
+    case NoStoreUrl = "Please enter store URL"
 }
 
 struct AuthDataModel {
